@@ -1,0 +1,199 @@
+// Estilos específicos para la página de inicio (Home)
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 0 5rem;
+
+    @media (max-width: 900px) {
+        padding: 3rem 0 4rem;
+    }
+}
+
+// Capa de fondo con detalles sutiles
+.hero__background {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+// Círculos y líneas decorativas
+.hero__circle {
+    position: absolute;
+    border-radius: 999px;
+    background: radial-gradient(circle at 30% 20%, rgba(229, 57, 53, 0.35), transparent 60%);
+    width: 420px;
+    height: 420px;
+    top: -80px;
+    left: -80px;
+}
+
+.hero__circle--right {
+    position: absolute;
+    border-radius: 999px;
+    background: radial-gradient(circle at 70% 80%, rgba(255, 202, 40, 0.2), transparent 60%);
+    width: 360px;
+    height: 360px;
+    bottom: -120px;
+    right: -80px;
+}
+
+.hero__grid-lines {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(255, 255, 255, 0.03) 1px,
+            transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(circle at center, black 0%, transparent 70%);
+}
+
+// Para el contenido del hero, aseguramos que esté encima del fondo
+.hero__content {
+    position: relative;
+    z-index: 1;
+}
+
+// Etiqueta pequeña arriba del título
+.hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+// Línea roja pequeña en la etiqueta
+.hero__eyebrow-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #e53935;
+}
+
+// Badge de servicios debajo del título
+.hero__services-badge {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.75rem;
+    padding: 0.5rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+// Mockup "pantalla" del lado derecho
+.hero-mockup {
+    border-radius: 24px;
+    padding: 1.25rem;
+    background: linear-gradient(145deg, #181821, #0d0d12);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.75);
+}
+
+// Barra superior de la "ventana"
+.hero-mockup__topbar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+// "Botones" tipo ventana (rojo, amarillo, verde)
+.hero-mockup__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+}
+
+.hero-mockup__dot--red {
+    background: #e53935;
+}
+
+.hero-mockup__dot--yellow {
+    background: #ffca28;
+}
+
+.hero-mockup__dot--green {
+    background: #66bb6a;
+}
+
+.hero-mockup__url {
+    flex: 1;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    background: rgba(0, 0, 0, 0.4);
+    color: rgba(255, 255, 255, 0.75);
+}
+
+// "Pantalla" interna con layout simple
+.hero-mockup__screen {
+    border-radius: 18px;
+    background: radial-gradient(circle at top left, #e53935 0%, #050509 50%);
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr;
+    gap: 1.25rem;
+
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+// Bloques internos
+.hero-mockup__block {
+    border-radius: 18px;
+    background: rgba(5, 5, 9, 0.8);
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-mockup__tag {
+    display: inline-flex;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-mockup__title {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.hero-mockup__line {
+    margin-top: 0.35rem;
+    height: 6px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.hero-mockup__line--primary {
+    background: linear-gradient(90deg, #ffca28, #e53935);
+}
+
+.hero-mockup__pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: 0.7rem;
+}
+
+.hero-mockup__pill {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}

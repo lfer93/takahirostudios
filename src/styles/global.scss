@@ -1,0 +1,41 @@
+@use './variables' as *;
+@use './home';
+// Importamos variables de colores y tipografías
+@use './variables' as *;
+
+// Reseteo básico para box-sizing
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+// Aseguramos que html, body y #root ocupen toda la altura
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+// Estilos base del body
+body {
+    font-family: $font-main; // tipografía principal (Inter)
+    background-color: $color-bg; // fondo oscuro
+    color: $color-text; // texto claro
+}
+
+// Enlaces sin subrayado por defecto, heredan el color
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+// Listas sin puntos y sin márgenes/paddings
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
